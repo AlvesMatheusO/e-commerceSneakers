@@ -17,24 +17,12 @@
     .attribution a { color: hsl(228, 45%, 44%); }
 
     .box {
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       background: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    .box-card {
-      width: 60rem;
-      height: 350px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-    }
-
-    .card-img-container {
-      flex: 1;
     }
 
     .card-img {
@@ -48,6 +36,23 @@
       padding: 1rem;
     }
 
+    /* Increase carousel size */
+    .carousel {
+      width: 80%;
+      max-width: 800px; /* Set a maximum width to ensure the carousel doesn't become too large on larger screens */
+    }
+
+    .carousel-inner {
+      height: 400px; /* Adjust the height of the carousel as needed */
+    }
+
+    .carousel-item {
+      display: flex;
+    }
+
+    .carousel-item .card {
+      flex: 1;
+    }
   </style>
 </head>
 
@@ -82,31 +87,133 @@
   </nav>
 
   <div class="box">
-    <div class="box-card">
-      <div class="card" style="width: 60rem;">
-        <div class="row no-gutters">
-          <div class="col-md-4 card-img-container">
-            <img src="images/image-product-1.jpg" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8 card-content">
-            
-            <div class="card-body">
-              <p class="card-text" style="color: orangered; font-weight: bolder;">SNEAKER COMPANY</p>
-
-              <h5 class="card-title">Fall Limited Edition Sneakers</h5>
-              <p class="card-text">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-              <a href="#" style="background-color: orangered; color: aliceblue;" class="btn">Add to cart</a>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card">
+            <div class="row no-gutters">
+              <div class="col-md-4 card-img-container">
+                <img src="images/image-product-1.jpg" class="card-img d-block" alt="...">
+              </div>
+              <div class="col-md-8 card-content">
+                <div class="card-body">
+                  <p class="card-text" style="color: orangered; font-weight: bolder;">SNEAKER COMPANY</p>
+                  <h5 class="card-title">Fall Limited Edition Sneakers</h5>
+                  <p class="card-text">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                  
+                  <div class="row justify-content-center mt-5">
+                    <div class="col-4">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <button type="button" class="btn" style="background-color: orangered; color: aliceblue;" id="decrease-button">-</button>
+                        </div>
+                        <input type="text" class="form-control text-center" id="item-count" value="0" readonly>
+                        <div class="input-group-append">
+                          <button type="button" class="btn" style="background-color: orangered; color: aliceblue;" id="increase-button">+</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
             </div>
           </div>
-  
+          
+          
         </div>
+        <div class="carousel-item">
+          <div class="card">
+            <div class="row no-gutters">
+              <div class="col-md-4 card-img-container">
+                <img src="images/image-product-2.jpg" class="card-img d-block" alt="...">
+              </div>
+              <div class="col-md-8 card-content">
+                <div class="card-body">
+                  <p class="card-text" style="color: orangered; font-weight: bolder;">SNEAKER COMPANY</p>
+                  <h5 class="card-title">Fall Limited Edition Sneakers</h5>
+                  <p class="card-text">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                  
+                  <div class="row justify-content-center mt-5">
+                    <div class="col-4">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <button type="button" class="btn" style="background-color: orangered; color: aliceblue;" id="decrease-button">-</button>
+                        </div>
+                        <input type="text" class="form-control text-center" id="item-count" value="0" readonly>
+                        <div class="input-group-append">
+                          <button type="button" class="btn" style="background-color: orangered; color: aliceblue;" id="increase-button">+</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row justify-content-center mt-3">
+                    <div class="col-4">
+                      <a href="#" style="background-color: orangered; color: aliceblue;" class="btn btn-block">Add to cart</a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          <div class="card">
+            <div class="row no-gutters">
+              <div class="col-md-4 card-img-container">
+                <img src="images/image-product-3.jpg" class="card-img d-block" alt="...">
+              </div>
+              <div class="col-md-8 card-content">
+                <div class="card-body">
+                  <p class="card-text" style="color: orangered; font-weight: bolder;">SNEAKER COMPANY</p>
+                  <h5 class="card-title">Fall Limited Edition Sneakers</h5>
+                  <p class="card-text">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                  
+                  <div class="row justify-content-center mt-5">
+                    <div class="col-4">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <button type="button" class="btn" style="background-color: orangered; color: aliceblue;" id="decrease-button">-</button>
+                        </div>
+                        <input type="text" class="form-control text-center" id="item-count" value="0" readonly>
+                        <div class="input-group-append">
+                          <button type="button" class="btn" style="background-color: orangered; color: aliceblue;" id="increase-button">+</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row justify-content-center mt-3">
+                    <div class="col-4">
+                      <a href="#" style="background-color: orangered; color: aliceblue;" class="btn btn-block">Add to cart</a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
